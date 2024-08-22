@@ -1,0 +1,377 @@
+html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(rgb(255, 187, 0), rgb(255, 81, 0));
+    color: white;
+  }
+  .botonañadir input[type=submit] {
+    background-color: #ff5f2073;
+    border: none;
+    color: white;
+    padding: 13px 22px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .eliminar-dominio input[type=submit] {
+    background-color: #cd380082;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 4px 2px;
+  }
+    .descargar-dominio input[type=submit] {
+    background-color: #0089ff9c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 4px 2px;
+  }
+  .dominios{
+    overflow-y: scroll;
+    height: 50%;
+    width: 100%;
+    padding-top:  10px;
+    background-color: rgb(243 69 0 / 26%);
+    border-radius: 10px;
+    place-items: center;
+  }
+  .dominio{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #e8590c;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25%;
+    width: 98%;
+    border-radius: 8px;
+  }
+  .nombre-dominio{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .descargar-dominio{
+
+  }
+  .eliminar-dominio{
+
+  }
+  .cerrar-sesion{
+    display: flex;
+    position: absolute;
+    padding: 10px;
+    width: 20%;
+    height: 5%;
+    bottom: 7%;
+    color: red;
+    right: 36%;
+    padding-bottom: 50px;
+  }
+  .panel-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 80%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .panel-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .panel-box .user-box {
+    position: relative;
+  }
+  
+  .panel-box .user-box input {
+    width: 30%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .panel-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .panel-box .user-box input:focus ~ label,
+  .panel-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #ffffff;
+    font-size: 12px;
+  }
+  
+  .panel-box form a {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+  }
+  
+  .panel-box a:hover {
+    background: linear-gradient(rgb(255, 81, 0), rgb(255, 187, 0));
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #f31919,
+                0 0 25px #ff5f20,
+                0 0 50px #ffa620,
+                0 0 100px #eee125;
+  }
+  
+  .panel-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .panel-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f81616);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .panel-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f48403);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .panel-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f8f400);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .panel-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #f48403);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  .descargar-dominio form a {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+  }
+  
+  .descargar-dominio a:hover {
+    background: linear-gradient(blue, cyan);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #f31919,
+                0 0 25px #ff5f20,
+                0 0 50px #ffa620,
+                0 0 100px #eee125;
+  }
+  
+  .descargar-dominio a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .descargar-dominio a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #339FFF);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .descargar-dominio a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #3390FF);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .descargar-dominio a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #33CAFF);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .descargar-dominio a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #33F0FF);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  button{
+     background-color: #0089ff9c;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+  text-align: 20px;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  /* width */
+::-webkit-scrollbar {
+    height: 5px;
+  }
+ 
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+ 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 3px;
+  }
+ 
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: orange;
+  }
